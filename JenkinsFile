@@ -62,6 +62,8 @@ pipeline {
     post{
         always {
             junit 'jest-results/junit.xml'
+            //generated from Jenkins http://localhost:8017/job/learn-jenkins-app/pipeline-syntax/ with publishHtmlReport
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'playwright-report', reportFiles: 'index.html', reportName: 'Playwright HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }
 }
