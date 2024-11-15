@@ -4,3 +4,5 @@ System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-sc
 
 
 http://localhost:8017/job/learn-jenkins-app/pipeline-syntax/
+
+http://localhost:8017/restart
