@@ -50,6 +50,7 @@ pipeline {
                 sh '''
                     npm config set strict-ssl false
                     npm install serve
+                    sleep 10
                     node_modules/.bin/serve -s build &
                     sleep 10
                     npx playwright test --reporter=html
