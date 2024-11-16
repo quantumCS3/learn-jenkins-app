@@ -1,8 +1,11 @@
 Try to run this script in Jenkins Dashboard > Manage Jenkins > section “Tools and actions” > Script Console:
 
 System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts;")
-
+jadmin
 
 http://localhost:8017/job/learn-jenkins-app/pipeline-syntax/
 
 http://localhost:8017/restart
+
+jenkins plugin:
+- Html publisher
