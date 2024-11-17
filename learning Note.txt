@@ -8,6 +8,11 @@ http://localhost:8017/job/learn-jenkins-app/pipeline-syntax/
 http://localhost:8017/restart
 
 jenkins plugin: jadmin
+- html report
 - Html publisher
 - docker
+- docker pipeline
 - stage
+
+
+add netlify credential
