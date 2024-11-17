@@ -102,7 +102,7 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy Prod') {
             agent {
                 docker {
                     image 'node:18-alpine'
@@ -130,7 +130,7 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'PUT YOUR NETLIFY SITE URL HERE'
+                CI_ENVIRONMENT_URL = 'https://inquisitive-taffy-66a65c.netlify.app/'
             }
 
             steps {
