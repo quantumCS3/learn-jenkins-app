@@ -118,6 +118,9 @@ pipeline {
                     node_modules/.bin/netlify status
                     node_modules/.bin/netlify deploy --dir=build --prod
                 '''
+                 script {
+                    env.STAGING_URL = sh(script: "node_modules/.bin/node-jq -r '.deploy_url' deploy-output.json", returnStdout: true)
+                }
             }
         }
 
@@ -131,7 +134,7 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'https://inquisitive-taffy-66a65c.netlify.app/'
+               CI_ENVIRONMENT_URL = "${env.STAGING_URL}"
             }
 
             steps {
